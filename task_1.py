@@ -1,15 +1,20 @@
-# Troublshooting - Version 2
+# Troublshooting - Version 2.1
 # - Each question to accept either YES or NO answer
+# - - Accept a range of suitable inputs.
 
 # This function will request user input and validate it's YES or NO.
+# Alternative inputs will be accepted as appropriate.
 # This function will then return TRUE or FALSE respectively.
 def inputYN():
+    trueResponses = ["Y", "YES", "1"]
+    falseResponses = ["N", "NO", "0", ""]
+    
     while True:
         answer = input("YES or NO: >> ").upper()
 
-        if answer == "YES":
+        if answer in trueResponses:
             return True
-        elif answer == "NO":
+        elif answer in falseResponses:
             return False
 
     return None
