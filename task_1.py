@@ -1,6 +1,5 @@
-# Troublshooting - Version 2.1
-# - Each question to accept either YES or NO answer
-# - - Accept a range of suitable inputs.
+# Troublshooting - Version 3
+# - Questions may lead to a solution (more efficient)
 
 # This function will request user input and validate it's YES or NO.
 # Alternative inputs will be accepted as appropriate.
@@ -19,24 +18,21 @@ def inputYN():
 
     return None
 
+# The decision tree of questions that are available!
+questions = [
+    ["Does your phone have signal?", "Your SIM card must be inserted."],
+    ["Have you dropped your phone?", "What a muppet.  You'll need to get that fixed."],
+    ["Has your phone suffered water damage?", "A jar of rice will fix that!"]
+]
+
 print("Welcome to the generic trouble shooter for a mobile phone.")
 
-print("Does your phone have signal?")
-if inputYN():
-    print("Your SIM card must be inserted.")
-    input()
-    exit(0)
-    
-print("Have you dropped your phone?")
-if inputYN():
-    print("What a muppet.  You'll need to get that fixed.")
-    input()
-    exit(0)
+for question in questions:
+    print(question[0])
 
-print("Has your phone suffered water damage?")
-if inputYN():
-    print("A jar of rice will fix that!")
-    input()
-    exit(0)
+    if inputYN():
+        print(question[1])
+        input()
+        exit(0)
 
 print("Uh oh, we have no solution.  Go back to your vendor!")

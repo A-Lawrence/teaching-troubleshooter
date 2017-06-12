@@ -12,3 +12,9 @@
 - Series of troubleshooting questions asked
 
 ### Version 2
+- Each question only accepts either YES or NO answer
+
+### Version 2.1
+- Extend the validation to accept *similar* answers
+
+### Version 3
