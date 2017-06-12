@@ -26,3 +26,4 @@
  
 ### Version 4
 * Questions may lead to a supplementary question
+ * Storage of questions upgraded to a dictionary to allow the anlpha-numeric keys of sub questions to be stored, instead of responses.
